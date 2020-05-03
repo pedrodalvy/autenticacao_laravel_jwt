@@ -22,6 +22,9 @@ POST /api/login
 ```http
 GET /api/users
 ```
+```http
+GET /api/logout
+```
 
 ## Exemplos de Request e Response
 
@@ -55,6 +58,11 @@ Response body:
 ]
 ```
 
+### POST /api/logout
+
+Exemplo: POST  http://localhost:8000/api/logout
+
+Response code: 204
 
 #### Observação
 

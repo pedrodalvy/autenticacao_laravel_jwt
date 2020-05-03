@@ -22,4 +22,6 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::get('users', function () {
         return User::all()->toJson();
     });
+
+    Route::post('logout', 'Api\AuthController@logout');
 });
