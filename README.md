@@ -1,6 +1,6 @@
 ## Projeto para autenticação por JWT
 
-Projeto que utiliza a biblioteca [tymondesigns/jwt-auth](https://github.com/tymondesigns/jwt-auth) para autenticação pela api.
+Projeto que utiliza a biblioteca [tymondesigns/jwt-auth](https://github.com/tymondesigns/jwt-auth) para autenticação via JWT.
 
 
 ### Requisitos
@@ -8,8 +8,13 @@ Projeto que utiliza a biblioteca [tymondesigns/jwt-auth](https://github.com/tymo
 * PHP 7.2.5 ou superior
 * Servidor Web (ex: Apache, Nginx, IIS)
 
+### Instalação
+
+* Clonar o repositório: `git clone https://github.com/pedrodalvy/autenticacao_laravel_jwt.git`
+* Acessar a pasta do projeto e installar as dependências: `composer install`
+
 
 #### Observação
 
-- A biblioteca utilizada é da branch d4cf9fd2b98790712d3e6cd1094e5ff018431f19 de desenvolvimento, pois ela é compatível com a versão 7 do Laravel.
+- A biblioteca do tymon/jwt-auth utilizada é da branch d4cf9fd2b98790712d3e6cd1094e5ff018431f19 de desenvolvimento, devido a necessidade de compatibilidade com o Laravel 7.
 - Para intalação foi utilizado o comando  `composer require tymon/jwt-auth:dev-develop#d4cf9fd2b98790712d3e6cd1094e5ff018431f19`.
