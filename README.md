@@ -19,10 +19,13 @@ Projeto que utiliza a biblioteca [tymondesigns/jwt-auth](https://github.com/tymo
 ```http
 POST /api/login
 ```
+```http
+GET /api/users
+```
 
 ## Exemplos de Request e Response
 
-#### POST /api/login
+### POST /api/login
 
 Exemplo: POST  http://localhost:8000/api/login
 
@@ -34,6 +37,23 @@ Request body:
 }
 ```
 
+### GET /api/users
+
+Exemplo: POST  http://localhost:8000/api/users
+
+Response body:
+```json
+[
+    {
+        "id": 1,
+        "name": "Sid Graham",
+        "email": "admin@user.com",
+        "email_verified_at": "2020-05-03T19:10:19.000000Z",
+        "created_at": "2020-05-03T19:10:19.000000Z",
+        "updated_at": "2020-05-03T19:10:19.000000Z"
+    }
+]
+```
 
 
 #### Observação
