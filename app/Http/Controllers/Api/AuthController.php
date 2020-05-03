@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class AuthController extends Controller
 {
@@ -24,15 +24,22 @@ class AuthController extends Controller
     private function responseToken($token)
     {
         return $token ? ['token' => $token] :
-            response()->json([
-                'error' => \Lang::get('auth.failed')
-            ], 400);
+        response()->json([
+            'error' => \Lang::get('auth.failed'),
+        ], 400);
     }
 
     public function logout()
     {
         \Auth::guard('api')->logout();
 
-        return response()->json([], 204);
+        return response()->json([], 204); // No-content
+    }
+
+    public function refresh()
+    {
+        $token = \Auth::guard('api')->refresh();
+
+        return response()->json(['token' => $token]);
     }
 }

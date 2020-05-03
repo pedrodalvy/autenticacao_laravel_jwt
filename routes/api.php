@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('login', 'Api\AuthController@login')->name('api.login');
 
+Route::post('refresh', 'Api\AuthController@refresh');
+
 Route::group(['middleware' => 'auth:api'], function () {
     Route::get('users', function () {
         return User::all()->toJson();

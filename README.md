@@ -25,6 +25,9 @@ GET /api/users
 ```http
 POST /api/logout
 ```
+```http
+POST /api/refresh
+```
 
 ## Exemplos de Request e Response
 
@@ -39,6 +42,7 @@ Request body:
     "password": "password"
 }
 ```
+
 
 ### GET /api/users
 
@@ -58,11 +62,24 @@ Response body:
 ]
 ```
 
+
 ### POST /api/logout
 
 Exemplo: POST  http://localhost:8000/api/logout
 
 Response code: 204
+
+
+### POST /api/refresh
+
+Exemplo: POST  http://localhost:8000/api/refresh
+
+Request body:
+```json
+{
+    "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwO"
+}
+```
 
 #### Observação
 
