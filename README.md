@@ -23,7 +23,7 @@ POST /api/login
 GET /api/users
 ```
 ```http
-GET /api/logout
+POST /api/logout
 ```
 
 ## Exemplos de Request e Response
