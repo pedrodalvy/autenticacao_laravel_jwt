@@ -39,7 +39,7 @@ Request body:
 
 ### GET /api/users
 
-Exemplo: POST  http://localhost:8000/api/users
+Exemplo: GET  http://localhost:8000/api/users
 
 Response body:
 ```json
