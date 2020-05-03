@@ -1,17 +1,39 @@
-## Projeto para autenticação por JWT
+# Projeto para autenticação por JWT
 
 Projeto que utiliza a biblioteca [tymondesigns/jwt-auth](https://github.com/tymondesigns/jwt-auth) para autenticação via JWT.
 
 
-### Requisitos
+## Requisitos
 
 * PHP 7.2.5 ou superior
 * Servidor Web (ex: Apache, Nginx, IIS)
 
-### Instalação
+## Instalação
 
 * Clonar o repositório: `git clone https://github.com/pedrodalvy/autenticacao_laravel_jwt.git`
 * Acessar a pasta do projeto e installar as dependências: `composer install`
+
+
+## Rotas
+
+```http
+POST /api/login
+```
+
+## Exemplos de Request e Response
+
+#### POST /api/login
+
+Exemplo: POST  http://localhost:8000/api/login
+
+Request body:
+```json
+{
+    "email": "admin@user.com",
+    "password": "password"
+}
+```
+
 
 
 #### Observação
